@@ -14,7 +14,7 @@ export default function HeaderLink({
   return (
     <Link
       href={href}
-      className={`text-gray-500 hover:text-gray-700 transition duration-300 ${className}`}
+      className={`text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200 transition duration-300 ${className}`}
     >
       {children}
     </Link>
