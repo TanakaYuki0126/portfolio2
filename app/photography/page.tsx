@@ -13,7 +13,7 @@ export default async function Home() {
     <div className="w-full gap-4 flex flex-col items-center">
       <p>Photography</p>
       <div className="w-full flex flex-wrap justify-center">
-        {items.map((item) => {
+        {items.map((item: { id: { S: string }; url: { S: string } }) => {
           return (
             <div
               key={item.id.S}
