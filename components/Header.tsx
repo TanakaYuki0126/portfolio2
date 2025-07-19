@@ -1,20 +1,22 @@
-import Link from "@/components/Header.Link";
+import CustomLink from "@/components/Header.Link";
+import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   return (
     <header className="w-full">
-      <nav
-        className={`w-full h-[40px] flex justify-between text-gray-800 items-center`}
-      >
+      <nav className={`w-full h-[40px] flex justify-between  items-center`}>
         <div>
-          <Link href="/" className="text-lg" inactive>
+          <Link
+            href={"/"}
+            className={`tracking-tight text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition duration-300 text-sm sm:text-lg`}
+          >
             tayutai - yuki
           </Link>
         </div>
-        <div className="flex gap-4 items-center">
-          <Link href="/profile">profile</Link>
-          <Link href="/photography">photography</Link>
+        <div className="flex gap-2 sm:gap-4 items-center">
+          <CustomLink href="/profile">profile</CustomLink>
+          <CustomLink href="/photography">photography</CustomLink>
           {/* <Link href="/music" className="text-gray-500 hover:text-gray-700">
             music
           </Link> */}

@@ -13,16 +13,15 @@ export default function HeaderLink({
   href,
   children,
   className,
-  inactive,
 }: HeaderLinkProps) {
   const pathname = usePathname();
-  const isActive = !inactive && pathname.startsWith(href);
+  const isActive = pathname.startsWith(href);
   return (
     <Link
       href={href}
       className={`hover:underline ${
         isActive && "underline text-gray-700 dark:text-gray-200"
-      } underline-offset-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition duration-300 ${className} leading-0`}
+      } underline-offset-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition duration-300 text-xs sm:text-base ${className} leading-0 tracking-tighter sm:tracking-tight`}
     >
       {children}
     </Link>
