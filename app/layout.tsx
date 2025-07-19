@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import MotionWrapper from "@/components/MotionWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="font-mono flex flex-col items-center gap-4 my-4 mx-10 md:mx-20">
+          <div className="font-mono flex flex-col items-center mx-5 sm:mx-10 md:mx-20">
             <Header />
-            {children}
+            <div className={`w-full min-h-[calc(100vh-80px)]`}>{children}</div>
             <Footer />
           </div>
         </ThemeProvider>

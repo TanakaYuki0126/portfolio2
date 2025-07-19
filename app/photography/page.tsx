@@ -14,26 +14,32 @@ export default async function Home() {
     <div className="w-full gap-4 flex flex-col items-center">
       <p className="text-gray-700 dark:text-gray-300">Photography</p>
       <div className="w-full flex flex-wrap justify-center">
-        {items.map((item: { id: { S: string }; url: { S: string } }) => {
-          return (
-            <div
-              key={item.id.S}
-              className="relative flex justify-center items-center m-5 w-[300px] h-[300px]"
-            >
-              <Link
-                href="/"
-                className="w-auto h-auto hover:opacity-50 transition duration-300"
+        {items.map(
+          (item: {
+            id: { S: string };
+            url: { S: string };
+            key: { S: string };
+          }) => {
+            return (
+              <div
+                key={item.id.S}
+                className="relative flex justify-center items-center m-5 w-[300px] h-[300px]"
               >
-                <Image
-                  src={item.url.S}
-                  alt="sample"
-                  fill
-                  style={{ objectFit: "contain" }}
-                />
-              </Link>
-            </div>
-          );
-        })}
+                <Link
+                  href={`/photography/${item.id.S}?key=${item.key.S}`}
+                  className="hover:opacity-50 transition duration-300"
+                >
+                  <Image
+                    src={item.url.S}
+                    alt="sample"
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
+                </Link>
+              </div>
+            );
+          }
+        )}
       </div>
     </div>
   );

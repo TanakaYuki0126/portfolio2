@@ -4,7 +4,9 @@ import { ThemeToggle } from "./ThemeToggle";
 export function Header() {
   return (
     <header className="w-full">
-      <nav className="w-full flex justify-between text-gray-800 items-center">
+      <nav
+        className={`w-full h-[40px] flex justify-between text-gray-800 items-center`}
+      >
         <div>
           <Link href="/" className="text-lg">
             tayutai - yuki
