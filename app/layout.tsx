@@ -32,9 +32,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="font-mono flex flex-col items-center mx-5 sm:mx-10 md:mx-20">
+          <div className="font-mono flex flex-col items-center mx-5 sm:mx-10 md:mx-5">
             <Header />
-            <div className={`w-full min-h-[calc(100vh-80px)]`}>{children}</div>
+            <div className={`w-full min-h-[calc(100vh-80px)] py-3`}>
+              {children}
+            </div>
             <Footer />
           </div>
         </ThemeProvider>

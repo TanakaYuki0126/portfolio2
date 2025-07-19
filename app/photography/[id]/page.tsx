@@ -5,6 +5,7 @@ export default async function Page({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
+  searchParams: { [key: string]: unknown };
 }) {
   const { id } = await params;
   const { key } = await searchParams;

@@ -23,7 +23,7 @@ export default async function Home() {
             return (
               <div
                 key={item.id.S}
-                className="relative flex justify-center items-center m-5 w-[300px] h-[300px]"
+                className="relative flex justify-center items-center m-4 w-[300px] h-[300px]"
               >
                 <Link
                   href={`/photography/${item.id.S}?key=${item.key.S}`}

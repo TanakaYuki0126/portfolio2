@@ -8,7 +8,7 @@ export function Header() {
         className={`w-full h-[40px] flex justify-between text-gray-800 items-center`}
       >
         <div>
-          <Link href="/" className="text-lg">
+          <Link href="/" className="text-lg" inactive>
             tayutai - yuki
           </Link>
         </div>
